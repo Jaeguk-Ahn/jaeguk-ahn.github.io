@@ -74,11 +74,24 @@ a {
 }
 
 .side_wrap .side_link {
-  text-align: right;
-  padding: 0 10px;
+  text-align: left;
+  margin: 0;
+  padding: 0 20px;
   line-height: 48px;
   font-size: 1.3rem;
   border-bottom: 1px solid #ddd;
+}
+
+.side_wrap .side_link.selected {
+  color: dodgerblue;
+}
+
+.side_wrap .side_link.fold_parent {
+  font-weight: bold;
+}
+
+.side_wrap .side_link.fold_branch {
+  padding: 0 40px;
 }
 
 .content_wrap {

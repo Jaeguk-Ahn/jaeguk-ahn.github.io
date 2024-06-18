@@ -1,7 +1,8 @@
 import {
-    HomeIndex,
+    PageFrame,
     HomeMain,
     BlogMain,
+    BlogStudyKotlin,
     PortfolioMain,
     PortfolioProfile
 } from '../views/index'
@@ -11,7 +12,7 @@ import ErrorPage from "../views/errorPage";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <HomeIndex />,
+        element: <PageFrame />,
         errorElement: <ErrorPage />,
         children: [
             {
@@ -42,11 +43,15 @@ const router = createBrowserRouter([
                 children: [
                     {
                         path: '',
-                        element: <Navigate to="/blog/study" replace />
+                        element: <Navigate to="/blog/study/kotlin" replace />
                     },
                     {
                         path: 'study',
-                        element: <div>Study</div>
+                        element: <Navigate to="/blog/study/kotlin" replace />
+                    },
+                    {
+                        path: 'study/kotlin',
+                        element: <BlogStudyKotlin />
                     }
                 ]
             },
